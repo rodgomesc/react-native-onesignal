@@ -1,5 +1,7 @@
 apply plugin: 'com.android.library'
 
+
+
 def safeExtGet(prop, fallback) {
     rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
 }
@@ -21,6 +23,9 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+}
+repositories {
+    maven { url 'https://jitpack.io' }
 }
 
 dependencies {
